@@ -1,0 +1,134 @@
+Clase teorica 4/9/2024
+
+C++
+
+g++ -std=c20
+
+Los archivos se compilan g++
+
+stdio.h >> iostream
+
+cout salida estandar de consola
+cin entrada estandar
+
+las variables se definen mientras se van usando
+
+cin y cout son objetos, << y >> son operadores
+
+
+
+en c las entradas y salidas son funciones de bibliotecas, en c++ se hace con objetos
+las entradas y salidas en c++ no necesitan ser especificadas con cadenas de formato (%d, %f, etc), tmpoco se necesitan el &
+
+
+std : : estan definidos en espacio de nombre
+
+el operador de ambito (: :), define que queremos usar un nombre en el espacio de nombre
+
+los espacios de nombres sirven para
+1_ colocar nombres definidos por una biblioteca definidos en un solo lugar
+2_ayudan a evitar conflictos de nombres
+
+
+esta notacion puede ser engorrosa, pero se puede hacer de una manera usando:
+_ using namespace : : name; -> using std std : : cout;
+_ otra forma using namespace std;
+esto va despues de los include
+
+Definición de variables
+_en c++ podemos definir a medida que necesitemos
+
+
+
+
+Crear nuevo tipo de datos
+struct, union, y class
+
+
+
+
+
+
+union Number{
+.
+.
+.
+};
+.
+.
+.
+
+Number x;
+
+
+
+Referencias y parámetros de referencias
+por valor -> se copia la variable
+por referencia -> se hace referencia a la misma
+
+
+
+para pasar por referencia en c++ definimos como un clon creando por ejemplo
+
+int entero;
+int &ref=entero;
+
+y podemos pasar por valor o por referencia, ejemplo:
+
+
+int ---- (int);
+void ---- (int &); ---> esta no devuelve nada ya que es por referencia;
+
+
+tipo de datos nuevos "bool", "nullptr"
+
+cmath-->math.h
+cstring-->string.h
+
+
+inline, copia el codigo fuente de una función donde esta es llamada, se pone al principio de la función
+
+Sobrecarga de funciones
+_ se puden definir funciones con el mismo nombre pero con diferentes paramentros
+
+
+Asignación de memoria
+operadores new y delete
+
+ptrnombre= new nombre;
+delete = ptrnombre;
+
+
+int ptrarreglo=new int [10];
+
+delete [] ptrarreglo;
+
+Variable de una clase,
+
+class Hora{
+
+
+private -> especidores de acceso
+int
+int
+int
+
+public
+Hora();-> funcion constructor, pone a un valor valido todos los miembros, siempre tiene que ponerse cuando se crea un objeto, puede haber mas de un constructor
+void imprimir();
+
+}
+
+
+Hora h1, h2, *hptr=h1, h3 [10];
+
+
+
+
+
+
+
+
+podriamos comparar h1 con h2
+
+h1.imprimir(); --> los objetos llaman a las funciones

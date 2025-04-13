@@ -1,0 +1,10 @@
+/*clase 3_7_24 teorica
+ESTANDAR R2-232
+conector de 9 y 25 pines (más común el de 9 pines)
+cada pin es una señal
+comando ssty, muestra la configuración interna de la terminal
+y cambiarla, si hago stty -a -F (/dev/....) para ver la configuracion del puerto (sudo dmesg para ver el archivo /dev/...)
+LA ide de arduino trabaja con cadenas porque es facil de depurar
+pensar los tipo de datos de manera adecuada
+Empezar a usar el socat con el cute y terminator
+para configurar los puertos desde c con termios.h

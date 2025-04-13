@@ -1,0 +1,57 @@
+Clase teorica 26/06
+Make: para que sirve?
+Se encarga de determinar que archivos cambiamos, y compilar solo esos (se fija la fecha del .c y del .o) si el .c es mas nuevo que el .o recompila
+automartiza el tiempo editar-compilar-verificar,
+
+Archivo makefile
+contiene las reglas que le indican que construir a make y como
+1ra parte, que construir? (target)
+2da parte, apartir de que objetos contruye el binario
+3ra parte, como hacer para llegar al binario)
+
+target: dependency dependency [...]
+    command
+    command
+    [...]
+
+main.o:main.c
+    gcc -Wall -c main.c
+
+make busca en el siguiente orden (GNUmakefile, makefile, Makefile)
+mientras mas arriba, "es lo ultimo que hace", la primer regla es el target por defecto, las demas se encadenan de esos
+
+make -f busca otro archivo pordefecto
+make -f [archivo a buscar]
+si las reglas no estan completas, el como siempre está definido (regals implicitas)
+en los makefile se puede usar variables, ejemplo cambiar el compilador CC=gcc
+existen reglas implicitas (como hacer objetos/ binarios)
+se pueden usar flags ejemplo: CFLAGS=-Wall
+
+$(CC) $(CFLAGS) -c main.c
+
+(rm -f) borra archivos
+
+
+%.o %.c
+@ hace referencia al tarjet y < hace referencia a las depencias
+
+reglas falsas
+.PHONY (no crea archivos de salida)
+puede ser el clean
+
+
+UNIDAD 4 Comunicaciones
+paralelas (ISA, PCI, IEEE-488)
+
+serie sincrona: se usa un clable de mas para sincronizar (dos señales) señal clock
+serie asincrona: no está la señal clock como hace??????
+
+HALF-DUPLEX: un walkie talkie, uno transmite y despues el otro
+FULL-DUBLEX: ambos transmiten al mismo tiempo
+
+RS-232
+si hay un 1, no quiere enviar nada, si se pone en 0 está lista para transmitir
+bit de paridad: mecanismo para detectar errores, si yo digo que la paridad es par, el bit de paridad se pone en uno para que la suma total de unos sea par
+bit de stop, se pone a 1
+la velocidad se configura
+envio 1 de señal 8 de datos 1 de stop, envio 10 en total, osea un 75% solo es util

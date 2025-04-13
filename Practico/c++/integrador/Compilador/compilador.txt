@@ -1,0 +1,4 @@
+gcc -E programa.c -o -> programa.i    # Preprocesado
+gcc -S programa.i -o -> programa.s    # Compilación
+gcc -c programa.s -o -> programa.o    # Ensamblado
+gcc programa.o -o    -> programa      # Enlazado (crea el ejecutable)

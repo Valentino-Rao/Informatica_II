@@ -1,0 +1,79 @@
+Clase teorica 25/09/24
+
+PUNTERO THIS
+_se pasa a la funcion miembro como primer miembro, lo hace implicitamente el compilador
+_tambien se pude usar de manera explicita, usando this, pero solo a miembros de la clase (existe solo dentro de los objetos de objetos de una clases
+_es un puntero (clase * const);
+_se utiliza para llamar funciones miembro en cascada:
+   hora h;
+   h.establecerhora(13);
+   h.establecerminuto(15);
+   h.imprimir();
+   la llamada en cascada es:
+   h.establecerhora(13).establecerminuto(15).imprimir();
+   estas funciones deberian devolver un *this, es una referencia a h referida al mismo objeto h
+_ no puedo concatenar las funciones mienbro get, pero las set
+_ cada objeto de cada clase tiene un puntero this
+
+
+
+
+COMPOSICION DE CLASES
+  class punto2D{
+    public;
+
+    punto2D(float=0.0, float 0.0);
+    void imprimir() const;
+    punto2D &establecerX(float);
+    punto2D &establecerY(float);
+    float obtenerX() const {return x;}
+    float obtenerY() const {return Y;}
+
+    private;
+    float x,y;
+  }
+
+  class circulo{
+    public;
+    circulo(float=1.0,float=0.0,float0.0);
+    void imprimir() const;
+
+    private;
+    float radio;
+    punto2D centro;
+  }
+
+
+  punto2D::punto2D(float x, float y){
+    this ->x =x;
+    this ->y =y;
+
+  }
+_como pasamos desde el constructor circulo los valores al constructor de punto2D??
+  circulo::circulo(float r, float x, float y) : centro(x,y), radio(r) { }
+
+
+_como pasamos un punto ya hecho??
+class circulo{
+    public;
+    circulo(float=1.0,float=0.0,float0.0);
+    void imprimir() const;
+    circulo(float=1.0, punto2D (p) );
+
+    private;
+    float radio;
+    punto2D centro;
+  }
+
+circulo c2(5.2,p);
+ejercicio implementar la funcion verifica linea
+
+
+
+
+
+QT
+instalar qt creator
+ver las diapos
+g++ hola.cpp -I la ruta de instalcions de qt core -L// -lbib -fPIC
+

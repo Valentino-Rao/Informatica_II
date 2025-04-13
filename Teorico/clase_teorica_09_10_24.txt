@@ -1,0 +1,40 @@
+Herencia:
+Cuando se crea una clase puede heredar miebros de una clase base, puede ser que una clase herede de 1 o mas clases, estas clases que reciben la herencia recibe nombres de clase derivada
+
+para indicar que circulo deriva de la clase figurabidimiensional
+
+ class Circulo : public FiguraBidiminesional{
+ }
+ public hace referencia a que lo que era publico queda publico y lo privado queda privado, las funciones amigas no se heredan (los amigos de tu papa no son tus amigos)
+
+ miebros protegidos, la clase deriva puede acceder a clase publicos y protegidos de la clese original
+
+
+ para declarar a la clasedos como amiga de claseuno, en la definicion de claseuno debe agregarse
+
+friend class Clasedos;
+
+
+_Sobrecarga de operadores
+
+No podemos crear nuevos operadores
+
+
+el operador = se puede usar sin sobrecargar, pero es peligroso, debemos hacer una sobrecarga implicita
+
+c1 + c2 pasa a
+c1.sumar(c2);
+
+para hacerlo bien
+operator +
+operator -
+operator <<
+
+complejo operator + (comple c);
+complejo operator - (comple c);
+
+cuando el compilador ve c1 + c2, usa al objeto izquierdo como argumento para la función
+
+
+
+

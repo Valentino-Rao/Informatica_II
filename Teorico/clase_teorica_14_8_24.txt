@@ -1,0 +1,9 @@
+clase 14/08 (RELAX)
+SLIDE QUE NO SUBIO
+_encapsulados del micro controlador en los arduinos
+_ memoria flash 16 celdas de 16 bits o 32 celdas de 8 bites, los perificos
+_ hacer el make para el arduino con avr
+
+SLIDE PROGRAMACION ATM 328
+_ ver la slide
+_ PORTD es el registro de los puertos, ese se usa para que

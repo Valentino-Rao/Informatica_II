@@ -1,0 +1,17 @@
+Operador & (AND)
+Operador | (OR)
+Operador ^ (XOR)
+Operador ~ (NOT)
+
+Tabla de Verdades
+
+A B  | A&B | A|B | A^B |
+0 0  |  0  |  0  |  0  |
+0 1  |  0  |  1  |  1  |
+1 0  |  0  |  1  |  1  |
+1 1  |  1  |  1  |  0  |
+
+A |~A
+1 |0
+0 |1
+
